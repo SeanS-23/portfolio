@@ -1,17 +1,16 @@
 <template>
   <v-app>
     <v-app-bar app dark hide-on-scroll elevation="0" color="#0A182F">
+      <v-icon size="32"> mdi-facebook </v-icon>
       <v-spacer />
       <v-btn text class="text-none"> About </v-btn>
       <v-btn text class="text-none"> Experience </v-btn>
       <v-btn text class="text-none"> Work </v-btn>
       <v-btn text class="text-none"> Contact </v-btn>
-      <v-btn outlined class="text-none"> Resume </v-btn>
+      <v-btn color="teal accent-1" outlined class="text-none"> Resume </v-btn>
     </v-app-bar>
 
-    <v-main class="body">
-      <HelloWorld />
-    </v-main>
+    <v-main class="body"> </v-main>
   </v-app>
 </template>
 
@@ -22,14 +21,10 @@
 </style>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
-
 export default {
   name: "App",
 
-  components: {
-    HelloWorld,
-  },
+  components: {},
 
   data: () => ({
     //
