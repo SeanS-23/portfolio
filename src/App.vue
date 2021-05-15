@@ -11,9 +11,9 @@
     </v-app-bar>
 
     <v-main class="body">
-      <v-row>
+      <v-row align="center" class="ma-0" style="height: calc(100vh - 128px)">
         <v-spacer />
-        <v-col cols="6">
+        <v-col cols="9">
           <welcome />
         </v-col>
         <v-spacer />
