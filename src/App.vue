@@ -1,53 +1,32 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
-
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+    <v-app-bar app dark hide-on-scroll elevation="0" color="#0A182F">
+      <v-toolbar-items>
+        <v-btn class="text-none"> About </v-btn>
+        <v-btn class="text-none"> Experience </v-btn>
+        <v-btn class="text-none"> Work </v-btn>
+        <v-btn class="text-none"> Contact </v-btn>
+        <v-btn class="text-none"> Resume </v-btn>
+      </v-toolbar-items>
     </v-app-bar>
 
-    <v-main>
-      <HelloWorld/>
+    <v-main class="body">
+      <HelloWorld />
     </v-main>
   </v-app>
 </template>
 
+<style>
+.body {
+  background-color: #0a182f;
+}
+</style>
+
 <script>
-import HelloWorld from './components/HelloWorld';
+import HelloWorld from "./components/HelloWorld";
 
 export default {
-  name: 'App',
+  name: "App",
 
   components: {
     HelloWorld,
