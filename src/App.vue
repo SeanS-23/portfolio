@@ -11,6 +11,15 @@
     </v-app-bar>
 
     <v-main class="body">
+      <v-layout justify-end column>
+        <v-btn icon>
+          <v-icon> mdi-facebook </v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon> mdi-facebook </v-icon>
+        </v-btn>
+      </v-layout>
+
       <v-row align="center" class="ma-0" style="height: calc(100vh - 128px)">
         <v-spacer />
         <v-col cols="9">

@@ -1,12 +1,12 @@
 <template>
   <v-card flat color="transparent">
     <v-card-text> Hi, my name is </v-card-text>
-    <v-card-title style="word-break: break-word" class="pt-0 text-h4 pb-1">
+    <v-card-title style="word-break: break-word" class="pt-0 text-h3 pb-1">
       Sean Springmann
     </v-card-title>
     <v-card-title
       style="word-break: break-word"
-      class="pt-0 text-h4 grey--text"
+      class="pt-2 text-h4 grey--text"
     >
       I build things but I am bad :(
     </v-card-title>
