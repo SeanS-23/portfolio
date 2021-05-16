@@ -13,10 +13,19 @@
     <v-main class="body">
       <v-layout align-center justify-end column class="social-icons">
         <v-btn icon>
-          <v-icon> mdi-facebook </v-icon>
+          <v-icon color="#d0d0d0"> mdi-facebook </v-icon>
         </v-btn>
         <v-btn icon>
-          <v-icon> mdi-facebook </v-icon>
+          <v-icon color="#d0d0d0"> mdi-github </v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon color="#d0d0d0"> mdi-linkedin </v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon color="#d0d0d0"> mdi-twitch </v-icon>
+        </v-btn>
+        <v-btn icon>
+          <v-icon color="#d0d0d0"> mdi-youtube </v-icon>
         </v-btn>
         <div class="bar" />
       </v-layout>
@@ -25,7 +34,7 @@
         <a href="mailto:seanspringmann@comcast.net" class="email-link"
           >seanspringmann@comcast.net</a
         >
-        <div class="bar" />
+        <div class="bar mt-2" />
       </v-layout>
 
       <v-row align="center" class="ma-0" style="height: calc(100vh - 128px)">
@@ -58,7 +67,8 @@
 
 .email-link {
   writing-mode: vertical-rl;
-  padding-right: 90px;
+  text-decoration: none;
+  color: #d0d0d0 !important;
 }
 
 .bar {
