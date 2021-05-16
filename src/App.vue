@@ -4,7 +4,7 @@
       <v-icon size="32"> mdi-boxing-glove </v-icon>
       <v-spacer />
       <v-btn href="#about" text class="text-none"> About </v-btn>
-      <v-btn text class="text-none"> Experience </v-btn>
+      <v-btn href="#experience" text class="text-none"> Experience </v-btn>
       <v-btn text class="text-none"> Work </v-btn>
       <v-btn text class="text-none"> Contact </v-btn>
       <v-btn color="teal accent-1" outlined class="text-none"> Resume </v-btn>
@@ -47,36 +47,66 @@
         <div class="bar mt-2" />
       </v-layout>
 
-      <v-row align="center" class="ma-0" style="height: 100vh">
-        <v-spacer />
-        <v-col cols="9">
-          <welcome />
-        </v-col>
-        <v-spacer />
-      </v-row>
+      <v-row justify="center" align="center" class="ma-0">
+        <v-col
+          cols="12"
+          align="center"
+          style="max-width: 70rem; padding-left: 5rem; padding-right: 5rem"
+        >
+          <v-row
+            class="ma-0"
+            style="height: 100vh"
+            justify="center"
+            align="center"
+          >
+            <v-col cols="12" align="start">
+              <welcome />
+            </v-col>
+          </v-row>
+          <v-row class="ma-0" justify="center" align="center">
+            <v-col cols="12" align="start">
+              <a name="about" />
+              <p class="text-body pb-1 has-anchor">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus vel hendrerit ipsum, vitae condimentum ligula. In
+                dictum ultricies eros, ut finibus ipsum. Nunc sit amet arcu
+                imperdiet, vehicula dui eu, congue sapien. Maecenas condimentum
+                quis purus non maximus. Nullam aliquam eu ligula rutrum
+                sollicitudin. In at sem id lacus vestibulum condimentum. Sed
+                semper, turpis eget congue congue, ligula ex ornare augue, sit
+                amet mollis sem velit eget nunc. Praesent faucibus orci sit amet
+                erat vehicula auctor. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia curae; Nunc non dui in tortor
+                feugiat venenatis. Phasellus aliquam libero laoreet consequat
+                sollicitudin. Vestibulum eget eros nunc. Aliquam sagittis lectus
+                eu tellus euismod, et viverra ligula finibus. Cras vitae lorem
+                turpis. Sed sagittis vel quam nec tempus.
+              </p>
 
-      <v-row align="center" class="ma-0">
-        <v-spacer />
-        <v-col cols="9">
-          <p ref="about" class="pt- text-body pb-1">
-            <a name="about" />
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-            vel hendrerit ipsum, vitae condimentum ligula. In dictum ultricies
-            eros, ut finibus ipsum. Nunc sit amet arcu imperdiet, vehicula dui
-            eu, congue sapien. Maecenas condimentum quis purus non maximus.
-            Nullam aliquam eu ligula rutrum sollicitudin. In at sem id lacus
-            vestibulum condimentum. Sed semper, turpis eget congue congue,
-            ligula ex ornare augue, sit amet mollis sem velit eget nunc.
-            Praesent faucibus orci sit amet erat vehicula auctor. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum
-            primis in faucibus orci luctus et ultrices posuere cubilia curae;
-            Nunc non dui in tortor feugiat venenatis. Phasellus aliquam libero
-            laoreet consequat sollicitudin. Vestibulum eget eros nunc. Aliquam
-            sagittis lectus eu tellus euismod, et viverra ligula finibus. Cras
-            vitae lorem turpis. Sed sagittis vel quam nec tempus.
-          </p>
+              <div style="height: 20rem" />
+              <a name="experience" />
+              <p class="text-body pb-1 has-anchor">
+                Sugma Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Phasellus vel hendrerit ipsum, vitae condimentum ligula. In
+                dictum ultricies eros, ut finibus ipsum. Nunc sit amet arcu
+                imperdiet, vehicula dui eu, congue sapien. Maecenas condimentum
+                quis purus non maximus. Nullam aliquam eu ligula rutrum
+                sollicitudin. In at sem id lacus vestibulum condimentum. Sed
+                semper, turpis eget congue congue, ligula ex ornare augue, sit
+                amet mollis sem velit eget nunc. Praesent faucibus orci sit amet
+                erat vehicula auctor. Lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
+                luctus et ultrices posuere cubilia curae; Nunc non dui in tortor
+                feugiat venenatis. Phasellus aliquam libero laoreet consequat
+                sollicitudin. Vestibulum eget eros nunc. Aliquam sagittis lectus
+                eu tellus euismod, et viverra ligula finibus. Cras vitae lorem
+                turpis. Sed sagittis vel quam nec tempus.
+              </p>
+              <div style="height: 60rem" />
+            </v-col>
+          </v-row>
         </v-col>
-        <v-spacer />
       </v-row>
     </v-main>
   </v-app>
@@ -111,6 +141,10 @@ body::-webkit-scrollbar-thumb {
 
 .social-icon {
   transition: all 0.25s ease;
+}
+
+.has-anchor {
+  padding-top: 5rem;
 }
 
 .social-icon:hover {
@@ -154,22 +188,5 @@ export default {
   data: () => ({
     //
   }),
-  mounted() {
-    const location = window.location.hash;
-    if (!location) return;
-    const anchor = location.substring(location.indexOf("#") + 1);
-    this.scrollTo(anchor);
-  },
-  methods: {
-    scrollTo(ref) {
-      const element = this.$refs[ref];
-      if (!element) {
-        console.warn(`${ref} has not been defined`);
-        return;
-      }
-      element.scrollIntoView({ behavior: "smooth" });
-      location.replace(`#${ref}`);
-    },
-  },
 };
 </script>
