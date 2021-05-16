@@ -1,9 +1,9 @@
 <template>
   <v-app>
     <v-app-bar app dark hide-on-scroll elevation="0" color="#0A182F">
-      <v-icon size="32"> mdi-facebook </v-icon>
+      <v-icon size="32"> mdi-boxing-glove </v-icon>
       <v-spacer />
-      <v-btn text class="text-none"> About </v-btn>
+      <v-btn href="#about" text class="text-none"> About </v-btn>
       <v-btn text class="text-none"> Experience </v-btn>
       <v-btn text class="text-none"> Work </v-btn>
       <v-btn text class="text-none"> Contact </v-btn>
@@ -47,10 +47,34 @@
         <div class="bar mt-2" />
       </v-layout>
 
-      <v-row align="center" class="ma-0" style="height: calc(100vh - 128px)">
+      <v-row align="center" class="ma-0" style="height: 100vh">
         <v-spacer />
         <v-col cols="9">
           <welcome />
+        </v-col>
+        <v-spacer />
+      </v-row>
+
+      <v-row align="center" class="ma-0">
+        <v-spacer />
+        <v-col cols="9">
+          <p ref="about" class="pt- text-body pb-1">
+            <a name="about" />
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            vel hendrerit ipsum, vitae condimentum ligula. In dictum ultricies
+            eros, ut finibus ipsum. Nunc sit amet arcu imperdiet, vehicula dui
+            eu, congue sapien. Maecenas condimentum quis purus non maximus.
+            Nullam aliquam eu ligula rutrum sollicitudin. In at sem id lacus
+            vestibulum condimentum. Sed semper, turpis eget congue congue,
+            ligula ex ornare augue, sit amet mollis sem velit eget nunc.
+            Praesent faucibus orci sit amet erat vehicula auctor. Lorem ipsum
+            dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum
+            primis in faucibus orci luctus et ultrices posuere cubilia curae;
+            Nunc non dui in tortor feugiat venenatis. Phasellus aliquam libero
+            laoreet consequat sollicitudin. Vestibulum eget eros nunc. Aliquam
+            sagittis lectus eu tellus euismod, et viverra ligula finibus. Cras
+            vitae lorem turpis. Sed sagittis vel quam nec tempus.
+          </p>
         </v-col>
         <v-spacer />
       </v-row>
@@ -63,6 +87,19 @@
 html,
 body {
   background-color: #0a182f;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+body::-webkit-scrollbar-track {
+  background: #0a182f;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #4e5681;
+  border-radius: 20px;
+  margin-right: 5px;
+  border: 3px solid #0a182f;
 }
 
 .social-icons {
@@ -117,5 +154,22 @@ export default {
   data: () => ({
     //
   }),
+  mounted() {
+    const location = window.location.hash;
+    if (!location) return;
+    const anchor = location.substring(location.indexOf("#") + 1);
+    this.scrollTo(anchor);
+  },
+  methods: {
+    scrollTo(ref) {
+      const element = this.$refs[ref];
+      if (!element) {
+        console.warn(`${ref} has not been defined`);
+        return;
+      }
+      element.scrollIntoView({ behavior: "smooth" });
+      location.replace(`#${ref}`);
+    },
+  },
 };
 </script>
