@@ -12,19 +12,29 @@
 
     <v-main class="body">
       <v-layout align-center justify-end column class="social-icons">
-        <v-btn icon>
+        <v-btn
+          class="social-icon"
+          href="https://www.facebook.com/sean.springmann/"
+          target="_blank"
+          icon
+        >
           <v-icon color="#d0d0d0"> mdi-facebook </v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn
+          class="social-icon"
+          href="https://github.com/SeanS-23"
+          target="_blank"
+          icon
+        >
           <v-icon color="#d0d0d0"> mdi-github </v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn class="social-icon" icon>
           <v-icon color="#d0d0d0"> mdi-linkedin </v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn class="social-icon" icon>
           <v-icon color="#d0d0d0"> mdi-twitch </v-icon>
         </v-btn>
-        <v-btn icon>
+        <v-btn class="social-icon" icon>
           <v-icon color="#d0d0d0"> mdi-youtube </v-icon>
         </v-btn>
         <div class="bar" />
@@ -48,15 +58,29 @@
   </v-app>
 </template>
 
-<style>
-.body {
+<style lang="scss">
+.body,
+html,
+body {
   background-color: #0a182f;
 }
 
 .social-icons {
+  transition: all 0.25s ease;
   position: fixed;
   bottom: 0;
   left: 30px;
+}
+
+.social-icon {
+  transition: all 0.25s ease;
+}
+
+.social-icon:hover {
+  i {
+    transform: scale(1.05);
+    color: #a7ffeb !important;
+  }
 }
 
 .email-side {
@@ -66,9 +90,15 @@
 }
 
 .email-link {
+  transition: all 0.25s ease;
   writing-mode: vertical-rl;
   text-decoration: none;
   color: #d0d0d0 !important;
+}
+
+.email-link:hover {
+  transform: scale(1.05);
+  color: #a7ffeb !important;
 }
 
 .bar {
