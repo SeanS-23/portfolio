@@ -3,11 +3,25 @@
     <v-app-bar app dark hide-on-scroll elevation="0" color="#0A182F">
       <v-icon size="32"> mdi-boxing-glove </v-icon>
       <v-spacer />
-      <v-btn href="#about" text class="text-none"> About </v-btn>
-      <v-btn href="#experience" text class="text-none"> Experience </v-btn>
-      <v-btn text class="text-none"> Work </v-btn>
-      <v-btn text class="text-none"> Contact </v-btn>
-      <v-btn color="teal accent-1" outlined class="text-none"> Resume </v-btn>
+      <v-btn href="#about" text class="pl-3 pr-3 text-none">
+        <v-text class="text-none teal--text text--accent-1 pr-1"> 01. </v-text>
+        About
+      </v-btn>
+      <v-btn href="#experience" text class="pl-3 pr-3 text-none">
+        <v-text class="text-none teal--text text--accent-1 pr-1"> 02. </v-text>
+        Experience
+      </v-btn>
+      <v-btn href="#projects" text class="pl-3 pr-3 text-none">
+        <v-text class="text-none teal--text text--accent-1 pr-1"> 03. </v-text>
+        Projects
+      </v-btn>
+      <v-btn href="#contact" text class="pl-3 pr-3 text-none">
+        <v-text class="text-none teal--text text--accent-1 pr-1"> 04. </v-text>
+        Contact
+      </v-btn>
+      <v-btn color="teal accent-1" outlined class="pl-3 pr-3 text-none">
+        Resume
+      </v-btn>
     </v-app-bar>
 
     <v-main class="body">
@@ -37,14 +51,14 @@
         <v-btn class="social-icon" icon>
           <v-icon color="#d0d0d0"> mdi-youtube </v-icon>
         </v-btn>
-        <div class="bar" />
+        <div class="vertical-bar" />
       </v-layout>
 
       <v-layout align-center justify-end column class="email-side">
         <a href="mailto:seanspringmann@comcast.net" class="email-link"
           >seanspringmann@comcast.net</a
         >
-        <div class="bar mt-2" />
+        <div class="vertical-bar mt-2" />
       </v-layout>
 
       <v-row justify="center" align="center" class="ma-0">
@@ -66,43 +80,12 @@
           <v-row class="ma-0" justify="center" align="center">
             <v-col cols="12" align="start">
               <a name="about" />
-              <p class="text-body pb-1 has-anchor">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vel hendrerit ipsum, vitae condimentum ligula. In
-                dictum ultricies eros, ut finibus ipsum. Nunc sit amet arcu
-                imperdiet, vehicula dui eu, congue sapien. Maecenas condimentum
-                quis purus non maximus. Nullam aliquam eu ligula rutrum
-                sollicitudin. In at sem id lacus vestibulum condimentum. Sed
-                semper, turpis eget congue congue, ligula ex ornare augue, sit
-                amet mollis sem velit eget nunc. Praesent faucibus orci sit amet
-                erat vehicula auctor. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia curae; Nunc non dui in tortor
-                feugiat venenatis. Phasellus aliquam libero laoreet consequat
-                sollicitudin. Vestibulum eget eros nunc. Aliquam sagittis lectus
-                eu tellus euismod, et viverra ligula finibus. Cras vitae lorem
-                turpis. Sed sagittis vel quam nec tempus.
-              </p>
+              <about />
 
               <div style="height: 20rem" />
               <a name="experience" />
-              <p class="text-body pb-1 has-anchor">
-                Sugma Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Phasellus vel hendrerit ipsum, vitae condimentum ligula. In
-                dictum ultricies eros, ut finibus ipsum. Nunc sit amet arcu
-                imperdiet, vehicula dui eu, congue sapien. Maecenas condimentum
-                quis purus non maximus. Nullam aliquam eu ligula rutrum
-                sollicitudin. In at sem id lacus vestibulum condimentum. Sed
-                semper, turpis eget congue congue, ligula ex ornare augue, sit
-                amet mollis sem velit eget nunc. Praesent faucibus orci sit amet
-                erat vehicula auctor. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Vestibulum ante ipsum primis in faucibus orci
-                luctus et ultrices posuere cubilia curae; Nunc non dui in tortor
-                feugiat venenatis. Phasellus aliquam libero laoreet consequat
-                sollicitudin. Vestibulum eget eros nunc. Aliquam sagittis lectus
-                eu tellus euismod, et viverra ligula finibus. Cras vitae lorem
-                turpis. Sed sagittis vel quam nec tempus.
-              </p>
+              <experience />
+
               <div style="height: 60rem" />
             </v-col>
           </v-row>
@@ -144,7 +127,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .has-anchor {
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
 
 .social-icon:hover {
@@ -172,18 +155,62 @@ body::-webkit-scrollbar-thumb {
   color: #a7ffeb !important;
 }
 
-.bar {
+.vertical-bar {
   height: 90px;
   border-left: 1px solid #d0d0d0;
+}
+
+.horizontal-bar {
+  width: 70%;
+  border-top: 1px solid #455a64;
+}
+
+.experience-content-container {
+  display: flex;
+}
+
+.tab-list {
+  position: relative;
+  z-index: 3;
+  width: max-content;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+}
+
+.tab-list-btn {
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 0px 20px 2px;
+  border-left: 2px solid #a7ffeb;
+  background-color: transparent;
+  text-align: left;
+}
+
+.company {
+  color: #a7ffeb;
+}
+
+.tab-textbox {
+  width: fit-content;
+  height: auto;
 }
 </style>
 
 <script>
 import Welcome from "@/components/Welcome.vue";
+import About from "@/components/About.vue";
+import Experience from "@/components/Experience.vue";
 export default {
   name: "App",
 
-  components: { Welcome },
+  components: { Welcome, About, Experience },
 
   data: () => ({
     //
