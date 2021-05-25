@@ -180,6 +180,7 @@ body::-webkit-scrollbar-thumb {
 
 .tab-list-btn {
   text-decoration: none;
+  color: #d0d0d0 !important;
   position: relative;
   display: flex;
   -webkit-box-align: center;
