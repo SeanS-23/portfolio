@@ -47,14 +47,20 @@
 
     <div class="tabs experience-content-container">
       <div class="tab-list">
-        <v-btn
-          text
-          class="tab-list-btn text-none"
-          v-for="item in tabs"
-          :key="item.title"
-        >
-          {{ item.title }}
-        </v-btn>
+        <v-tabs background-color="transparent ml-4" vertical>
+          <template background-color="transparent" v-for="tab in tabs">
+            <v-tab class="text-none" :key="tab.company + 'company'">
+              {{ tab.company }}
+            </v-tab>
+            <v-tab-item class="pt-3 pl-7" :key="tab.company + 'content'">
+              <h3>
+                {{ tab.position }}
+                <span class="company"> @ {{ tab.company }} </span>
+              </h3>
+              {{ tab.content }}
+            </v-tab-item>
+          </template>
+        </v-tabs>
       </div>
     </div>
   </v-card>
@@ -65,10 +71,30 @@ export default {
   data: () => {
     return {
       tabs: [
-        { title: "Tab-0", content: "Content-0" },
-        { title: "Tab-1", content: "Content-1" },
-        { title: "Tab-2", content: "Content-2" },
-        { title: "Tab-3", content: "Content-3" },
+        {
+          company: "Home Depot",
+          position: "Team Member",
+          date: "May 31, 2021",
+          content: "Content-0",
+        },
+        {
+          company: "Onomatopoiea",
+          position: "Team Member",
+          date: "May 31, 2021",
+          content: "Content-1",
+        },
+        {
+          company: "Tab-2",
+          position: "Team Member",
+          date: "May 31, 2021",
+          content: "Content-2",
+        },
+        {
+          company: "Tab-3",
+          position: "Team Member",
+          date: "May 31, 2021",
+          content: "Content-3",
+        },
       ],
     };
   },

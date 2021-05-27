@@ -102,6 +102,15 @@ body {
   background-color: #0a182f;
 }
 
+:root .v-application .primary--text {
+  color: #a7ffeb !important;
+  caret-color: #a7ffeb !important;
+}
+
+.theme--dark.v-tabs-items {
+  background-color: transparent;
+}
+
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -167,6 +176,7 @@ body::-webkit-scrollbar-thumb {
 
 .experience-content-container {
   display: flex;
+  background-color: transparent;
 }
 
 .tab-list {
@@ -176,21 +186,6 @@ body::-webkit-scrollbar-thumb {
   padding: 0px;
   margin: 0px;
   list-style: none;
-}
-
-.tab-list-btn {
-  text-decoration: none;
-  color: #d0d0d0 !important;
-  position: relative;
-  display: flex;
-  -webkit-box-align: center;
-  justify-content: left;
-  align-items: center;
-  width: 100%;
-  height: 50px;
-  padding: 0px 20px 2px;
-  border-left: 2px solid #a7ffeb;
-  background-color: transparent;
   text-align: left;
 }
 
