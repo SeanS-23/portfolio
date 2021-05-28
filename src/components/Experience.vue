@@ -57,7 +57,21 @@
                 {{ tab.position }}
                 <span class="company"> @ {{ tab.company }} </span>
               </h3>
-              {{ tab.content }}
+              <p class="range main-color">{{ tab.date }}</p>
+              <ul>
+                <li class="tab-content-list main-color">
+                  {{ tab.content1 }}
+                </li>
+                <li class="tab-content-list main-color">
+                  {{ tab.content2 }}
+                </li>
+                <li class="tab-content-list main-color">
+                  {{ tab.content3 }}
+                </li>
+                <li class="tab-content-list main-color">
+                  {{ tab.content4 }}
+                </li>
+              </ul>
             </v-tab-item>
           </template>
         </v-tabs>
@@ -73,27 +87,53 @@ export default {
       tabs: [
         {
           company: "Home Depot",
-          position: "Team Member",
-          date: "May 31, 2021",
-          content: "Content-0",
+          position: "Pro Associate",
+          date: "May 31, 2021 - Present",
+          content1:
+            "Pro Associates are primarily responsible for outstanding customer service and ensuring transactions are handled quickly and accurately.",
+          content2:
+            "The Pro Associate will drive customer acquisition by asking probing project questions and be knowledgeable about Pro loyalty programs.",
+          content3:
+            "This position will utilize Pro benefits to drive sales by using bulk pricing, Pro Xtra, credit solutions, etc.",
+          content4:
+            "They will work at the Pro desk responding to general questions, and will transition Managed Account customers and quote building tasks to the PASA.",
         },
         {
-          company: "Onomatopoiea",
+          company: "Auntie Anne's",
           position: "Team Member",
-          date: "May 31, 2021",
-          content: "Content-1",
+          date: "October 2020 - January 2021",
+          content1:
+            "Follow and implement step by step instructions on the preparation, production, and distribution of goods.",
+          content2: "Process customer orders in a fast-paced environment.",
+          content3: "Assist customers and report to management daily.",
+          content4:
+            "Work in a team environment to solve and complete problems in a short time frame.",
         },
         {
-          company: "Tab-2",
-          position: "Team Member",
-          date: "May 31, 2021",
-          content: "Content-2",
+          company: "Shanna Erdman",
+          position: "Babysitter",
+          date: "September 2020 - January 2021",
+          content1:
+            "Successfully balanced work and academics by simultaneously engaging and ensuring the safety of two children under the age of 10, while amassing a 3.71 GPA for the final semester.",
+          content2:
+            "Aided children in completing and understanding coursework while they were participating in virtual classes during the pandemic.",
+          content3:
+            "Conducted a daily report on the behavior and achievements of the children.",
+          content4:
+            "Frequently settled disputes with compromise and reasoning.",
         },
         {
-          company: "Tab-3",
-          position: "Team Member",
-          date: "May 31, 2021",
-          content: "Content-3",
+          company: "Non-Existent",
+          position: "Nothing",
+          date: "January 2017 - January 2018",
+          content1:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi. Adipiscing elit ut aliquam purus sit amet. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Arcu felis bibendum ut tristique et egestas quis. Sit amet porttitor eget dolor morbi. Proin nibh nisl condimentum id venenatis a condimentum vitae. Ut pharetra sit amet aliquam id diam maecenas u",
+          content2:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi. Adipiscing elit ut aliquam purus sit amet. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Arcu felis bibendum ut tristique et egestas quis. Sit amet porttitor eget dolor morbi. Proin nibh nisl condimentum id venenatis a condimentum vitae. Ut pharetra sit amet aliquam id diam maecenas u",
+          content3:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi. Adipiscing elit ut aliquam purus sit amet. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Arcu felis bibendum ut tristique et egestas quis. Sit amet porttitor eget dolor morbi. Proin nibh nisl condimentum id venenatis a condimentum vitae. Ut pharetra sit amet aliquam id diam maecenas u",
+          content4:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porttitor massa id neque aliquam vestibulum morbi. Adipiscing elit ut aliquam purus sit amet. Dolor sit amet consectetur adipiscing elit ut aliquam purus. Arcu felis bibendum ut tristique et egestas quis. Sit amet porttitor eget dolor morbi. Proin nibh nisl condimentum id venenatis a condimentum vitae. Ut pharetra sit amet aliquam id diam maecenas u",
         },
       ],
     };

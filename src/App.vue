@@ -107,6 +107,10 @@ body {
   caret-color: #a7ffeb !important;
 }
 
+.main-color {
+  color: #d0d0d0;
+}
+
 .theme--dark.v-tabs-items {
   background-color: transparent;
 }
@@ -196,6 +200,10 @@ body::-webkit-scrollbar-thumb {
 .tab-textbox {
   width: fit-content;
   height: auto;
+}
+
+.tab-content-list {
+  list-style: circle;
 }
 </style>
 
