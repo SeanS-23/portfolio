@@ -8,43 +8,6 @@
       <div class="horizontal-bar ml-5" />
     </v-subheader>
 
-    <!-- <div class="experience-content-container">
-      <div class="tab-list">
-        <v-btn
-          text
-          id="tab-item-0"
-          class="tab-list-btn text-none rounded-sm"
-          @click="activeTab = 0"
-        >
-          <v-text class="text--grey"> Tab-0 </v-text>
-        </v-btn>
-        <v-btn
-          text
-          id="tab-item-1"
-          class="tab-list-btn text-none rounded-sm"
-          @click="activeTab = 1"
-        >
-          <v-text class="text--grey"> onomatopoeia </v-text>
-        </v-btn>
-        <v-btn
-          text
-          id="tab-item-2"
-          class="tab-list-btn text-none rounded-sm"
-          @click="activeTab = 2"
-        >
-          <v-text class="text--grey"> Tab-2 </v-text>
-        </v-btn>
-        <v-btn
-          text
-          id="tab-item-3"
-          class="tab-list-btn text-none rounded-sm"
-          @click="activeTab = 3"
-        >
-          <v-text class="text--grey"> Tab-3 </v-text>
-        </v-btn>
-      </div> 
-    </div> -->
-
     <div class="tabs experience-content-container">
       <div class="tab-list">
         <v-tabs background-color="transparent ml-4" vertical>

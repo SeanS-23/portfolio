@@ -22,7 +22,7 @@
       <a class="teal--text text--accent-1" href="https://brittanychiang.com">
         https://brittanychiang.com
       </a>
-      for learning purposes, with some help from ma boi Tim.
+      for learning purposes.
     </v-card-text>
     <v-card-actions>
       <v-btn outlined color="teal accent-1" x-large class="text-none">
