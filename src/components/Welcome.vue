@@ -10,10 +10,6 @@
       style="word-break: break-word"
       class="pt-2 text-h2 grey--text"
     >
-      I'm trying my best...
-      <v-icon size="56" color="#d0d0d0" class="grey--text">
-        mdi-emoticon-sad-outline
-      </v-icon>
     </v-card-title>
     <v-card-text style="word-break: break-word" class="pt-2 text-h6 grey--text">
       I am an up-and-coming Software Engineer who is currently tangling with the
