@@ -1,9 +1,9 @@
 <template>
   <v-card flat color="transparent" class="has-anchor">
     <v-subheader class="text-h4">
-      <v-text class="text-none teal--text text--accent-1 text-h5 pr-3">
+      <span class="text-none teal--text text--accent-1 text-h5 pr-3">
         01.
-      </v-text>
+      </span>
       About Me
       <div class="horizontal-bar ml-5" />
     </v-subheader>
